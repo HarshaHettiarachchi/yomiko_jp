@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 export default defineConfig({
-  base: "/yomiko/",
+  base: "/yomiko_jp/",
 
   plugins: [react(), tailwindcss()],
 
