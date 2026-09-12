@@ -34,7 +34,7 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/yomiko_jp">
       <ScrollToTop />
 
       <MainLayout>
