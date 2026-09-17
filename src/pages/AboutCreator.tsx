@@ -21,15 +21,13 @@ import {
 } from "@/data/portfolio";
 
 function AboutCreator() {
-  const [activeCategory, setActiveCategory] =
-    useState("All");
+  const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredProjects =
     activeCategory === "All"
       ? portfolioProjects
       : portfolioProjects.filter(
-          (project) =>
-            project.category === activeCategory,
+          (project) => project.category === activeCategory,
         );
 
   return (
@@ -53,17 +51,9 @@ function AboutCreator() {
         ===================================================== */}
 
         <motion.section
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.45,
-          }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45 }}
           className="
             relative
             overflow-hidden
@@ -131,7 +121,6 @@ function AboutCreator() {
 
             {/* Introduction */}
             <div className="min-w-0 flex-1">
-
               <div
                 className="
                   mb-3
@@ -147,7 +136,6 @@ function AboutCreator() {
                 "
               >
                 <Sparkles className="h-4 w-4" />
-
                 About the Creator
               </div>
 
@@ -188,17 +176,15 @@ function AboutCreator() {
                   sm:text-base
                 "
               >
-                I am an IT professional and aspiring web
-                developer who enjoys turning ideas into
-                modern, responsive, and user-friendly web
-                experiences. I created Yomiko as a
-                practical Japanese learning platform while
-                continuing to improve my skills through
-                real-world projects.
+                I am an IT professional and aspiring web developer
+                who enjoys turning ideas into modern, responsive,
+                and user-friendly web experiences. I created Yomiko
+                as a practical Japanese learning platform while
+                continuing to improve my skills through real-world
+                projects.
               </p>
 
               <div className="mt-5 flex flex-wrap gap-3">
-
                 <div
                   className="
                     flex
@@ -236,7 +222,6 @@ function AboutCreator() {
                   <Code2 className="h-4 w-4 text-pink-500" />
                   Web Development
                 </div>
-
               </div>
             </div>
           </div>
@@ -247,7 +232,6 @@ function AboutCreator() {
         ===================================================== */}
 
         <section className="mt-8 grid gap-5 md:grid-cols-3">
-
           <InfoCard
             icon={<Code2 className="h-6 w-6" />}
             title="Web Developer"
@@ -263,14 +247,11 @@ function AboutCreator() {
           />
 
           <InfoCard
-            icon={
-              <BriefcaseBusiness className="h-6 w-6" />
-            }
+            icon={<BriefcaseBusiness className="h-6 w-6" />}
             title="Project Based Learning"
             text="Improving practical skills by creating real websites, applications, assignments, and group projects."
             delay={0.1}
           />
-
         </section>
 
         {/* =====================================================
@@ -278,14 +259,8 @@ function AboutCreator() {
         ===================================================== */}
 
         <motion.section
-          initial={{
-            opacity: 0,
-            y: 15,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{
             once: true,
             amount: 0.15,
@@ -306,7 +281,6 @@ function AboutCreator() {
           "
         >
           <div className="flex flex-col gap-5 sm:flex-row">
-
             <div
               className="
                 flex
@@ -348,13 +322,12 @@ function AboutCreator() {
                   sm:text-base
                 "
               >
-                Yomiko was created to make Japanese
-                learning more practical, organized, and
-                enjoyable. The platform brings vocabulary,
-                kanji, grammar, expressions, verbs,
-                adjectives, numbers, listening practice,
-                quizzes, and progress tracking into one
-                learning experience.
+                Yomiko was created to make Japanese learning more
+                practical, organized, and enjoyable. The platform
+                brings vocabulary, kanji, grammar, expressions,
+                verbs, adjectives, numbers, listening practice,
+                quizzes, and progress tracking into one learning
+                experience.
               </p>
 
               <p
@@ -368,9 +341,9 @@ function AboutCreator() {
                   sm:text-base
                 "
               >
-                This project also gives me an opportunity
-                to continuously practice React, TypeScript,
-                API integration, component-based development,
+                This project also gives me an opportunity to
+                continuously practice React, TypeScript, API
+                integration, component-based development,
                 responsive UI design, and state management.
               </p>
             </div>
@@ -382,7 +355,6 @@ function AboutCreator() {
         ===================================================== */}
 
         <section className="mt-10">
-
           <div className="mb-5">
             <p
               className="
@@ -412,7 +384,6 @@ function AboutCreator() {
           </div>
 
           <div className="flex flex-wrap gap-3">
-
             {[
               "HTML5",
               "CSS3",
@@ -454,7 +425,6 @@ function AboutCreator() {
                 {technology}
               </span>
             ))}
-
           </div>
         </section>
 
@@ -463,7 +433,6 @@ function AboutCreator() {
         ===================================================== */}
 
         <section className="mt-12">
-
           <div className="mb-6">
             <p
               className="
@@ -500,8 +469,8 @@ function AboutCreator() {
                 sm:text-base
               "
             >
-              A collection of websites and applications I
-              have developed.
+              A collection of websites and applications I have
+              developed.
             </p>
           </div>
 
@@ -509,57 +478,38 @@ function AboutCreator() {
           <div
             className="
               mb-7
-              flex
+              grid
+              grid-cols-2
               gap-2
-              overflow-x-auto
-              pb-2
-              [scrollbar-width:none]
-              [&::-webkit-scrollbar]:hidden
+              sm:grid-cols-3
+              md:grid-cols-4
+              xl:grid-cols-6
             "
           >
-            {projectCategories.map(
-              (category) => (
-                <button
-                  key={category}
-                  type="button"
-                  onClick={() =>
-                    setActiveCategory(category)
+            {projectCategories.map((category) => (
+              <button
+                key={category}
+                type="button"
+                onClick={() => setActiveCategory(category)}
+                className={`
+                  w-full
+                  rounded-xl
+                  px-4
+                  py-2.5
+                  text-sm
+                  font-semibold
+                  transition-all
+                  duration-200
+                  ${
+                    activeCategory === category
+                      ? "bg-pink-500 text-white shadow-lg shadow-pink-500/20"
+                      : "bg-white text-slate-600 hover:bg-pink-50 hover:text-pink-500 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-pink-500/10 dark:hover:text-pink-400"
                   }
-                  className={`
-                    shrink-0
-                    rounded-xl
-                    px-4
-                    py-2.5
-                    text-sm
-                    font-semibold
-                    transition-all
-                    duration-200
-
-                    ${
-                      activeCategory === category
-                        ? `
-                          bg-pink-500
-                          text-white
-                          shadow-lg
-                          shadow-pink-500/20
-                        `
-                        : `
-                          bg-white
-                          text-slate-600
-                          hover:bg-pink-50
-                          hover:text-pink-500
-                          dark:bg-slate-900
-                          dark:text-slate-300
-                          dark:hover:bg-pink-500/10
-                          dark:hover:text-pink-400
-                        `
-                    }
-                  `}
-                >
-                  {category}
-                </button>
-              ),
-            )}
+                `}
+              >
+                {category}
+              </button>
+            ))}
           </div>
 
           {/* Project Grid */}
@@ -572,226 +522,218 @@ function AboutCreator() {
                 xl:grid-cols-3
               "
             >
-              {filteredProjects.map(
-                (project, index) => (
-                  <motion.article
-                    key={project.id}
-                    initial={{
-                      opacity: 0,
-                      y: 15,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    viewport={{
-                      once: true,
-                      amount: 0.1,
-                    }}
-                    transition={{
-                      delay: index * 0.04,
-                    }}
+              {filteredProjects.map((project, index) => (
+                <motion.article
+                  key={project.id}
+                  initial={{
+                    opacity: 0,
+                    y: 15,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                    amount: 0.1,
+                  }}
+                  transition={{
+                    delay: index * 0.04,
+                  }}
+                  className="
+                    group
+                    flex
+                    flex-col
+                    overflow-hidden
+                    rounded-3xl
+                    border
+                    border-slate-200
+                    bg-white
+                    shadow-sm
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1
+                    hover:border-pink-200
+                    hover:shadow-xl
+                    dark:border-slate-800
+                    dark:bg-slate-900
+                    dark:hover:border-pink-500/30
+                  "
+                >
+                  {/* Project Header */}
+                  <div
                     className="
-                      group
+                      relative
                       flex
-                      flex-col
+                      h-36
+                      items-center
+                      justify-center
                       overflow-hidden
-                      rounded-3xl
-                      border
-                      border-slate-200
-                      bg-white
-                      shadow-sm
-                      transition-all
-                      duration-300
-                      hover:-translate-y-1
-                      hover:border-pink-200
-                      hover:shadow-xl
-                      dark:border-slate-800
-                      dark:bg-slate-900
-                      dark:hover:border-pink-500/30
+                      bg-gradient-to-br
+                      from-pink-500/10
+                      via-fuchsia-500/10
+                      to-purple-500/10
+                      dark:from-pink-500/10
+                      dark:via-purple-500/10
+                      dark:to-slate-800
                     "
                   >
-                    {/* Project Header */}
                     <div
                       className="
                         relative
                         flex
-                        h-36
+                        h-16
+                        w-16
                         items-center
                         justify-center
-                        overflow-hidden
-                        bg-gradient-to-br
-                        from-pink-500/10
-                        via-fuchsia-500/10
-                        to-purple-500/10
-                        dark:from-pink-500/10
-                        dark:via-purple-500/10
-                        dark:to-slate-800
+                        rounded-2xl
+                        bg-white
+                        text-pink-500
+                        shadow-lg
+                        transition-transform
+                        duration-300
+                        group-hover:scale-110
+                        dark:bg-slate-800
                       "
                     >
-                      <div
-                        className="
-                          relative
-                          flex
-                          h-16
-                          w-16
-                          items-center
-                          justify-center
-                          rounded-2xl
-                          bg-white
-                          text-pink-500
-                          shadow-lg
-                          transition-transform
-                          duration-300
-                          group-hover:scale-110
-                          dark:bg-slate-800
-                        "
-                      >
-                        {project.category ===
-                        "Portfolio" ? (
-                          <UserRound className="h-7 w-7" />
-                        ) : project.category ===
-                          "Web Applications" ? (
-                          <Layers3 className="h-7 w-7" />
-                        ) : project.category ===
-                          "Individual Assignment" ? (
-                          <GraduationCap className="h-7 w-7" />
-                        ) : project.category ===
-                          "Photography & Business" ? (
-                          <Globe className="h-7 w-7" />
-                        ) : (
-                          <Code2 className="h-7 w-7" />
-                        )}
-                      </div>
-
-                      {project.featured && (
-                        <span
-                          className="
-                            absolute
-                            right-4
-                            top-4
-                            rounded-full
-                            bg-pink-500
-                            px-3
-                            py-1
-                            text-[10px]
-                            font-bold
-                            uppercase
-                            tracking-wider
-                            text-white
-                          "
-                        >
-                          Featured
-                        </span>
+                      {project.category === "Portfolio" ? (
+                        <UserRound className="h-7 w-7" />
+                      ) : project.category === "Web Applications" ? (
+                        <Layers3 className="h-7 w-7" />
+                      ) : project.category === "Individual Assignment" ? (
+                        <GraduationCap className="h-7 w-7" />
+                      ) : project.category === "Photography & Business" ? (
+                        <Globe className="h-7 w-7" />
+                      ) : (
+                        <Code2 className="h-7 w-7" />
                       )}
                     </div>
 
-                    {/* Project Content */}
-                    <div
-                      className="
-                        flex
-                        flex-1
-                        flex-col
-                        p-5
-                      "
-                    >
-                      <h3
-                        className="
-                          text-xl
-                          font-bold
-                          text-slate-900
-                          dark:text-white
-                        "
-                      >
-                        {project.title}
-                      </h3>
-
+                    {project.featured && (
                       <span
                         className="
-                          mb-3
-                          mt-2
-                          w-fit
-                          rounded-lg
-                          bg-pink-50
-                          px-2.5
+                          absolute
+                          right-4
+                          top-4
+                          rounded-full
+                          bg-pink-500
+                          px-3
                           py-1
-                          text-xs
-                          font-semibold
-                          text-pink-600
-                          dark:bg-pink-500/10
-                          dark:text-pink-400
-                        "
-                      >
-                        {project.category}
-                      </span>
-
-                      <p
-                        className="
-                          flex-1
-                          text-sm
-                          leading-6
-                          text-slate-600
-                          dark:text-slate-400
-                        "
-                      >
-                        {project.description}
-                      </p>
-
-                      {/* Technologies */}
-                      <div className="mt-5 flex flex-wrap gap-2">
-                        {project.technologies.map(
-                          (technology) => (
-                            <span
-                              key={technology}
-                              className="
-                                rounded-lg
-                                bg-slate-100
-                                px-2.5
-                                py-1
-                                text-[11px]
-                                font-medium
-                                text-slate-600
-                                dark:bg-slate-800
-                                dark:text-slate-400
-                              "
-                            >
-                              {technology}
-                            </span>
-                          ),
-                        )}
-                      </div>
-
-                      {/* View Project */}
-                      <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="
-                          mt-5
-                          flex
-                          items-center
-                          justify-center
-                          gap-2
-                          rounded-xl
-                          bg-slate-900
-                          px-4
-                          py-3
-                          text-sm
-                          font-semibold
+                          text-[10px]
+                          font-bold
+                          uppercase
+                          tracking-wider
                           text-white
-                          transition-all
-                          hover:bg-pink-500
-                          dark:bg-slate-800
-                          dark:hover:bg-pink-500
                         "
                       >
-                        <ExternalLink className="h-4 w-4" />
-                        View Project
-                      </a>
+                        Featured
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Project Content */}
+                  <div
+                    className="
+                      flex
+                      flex-1
+                      flex-col
+                      p-5
+                    "
+                  >
+                    <h3
+                      className="
+                        text-xl
+                        font-bold
+                        text-slate-900
+                        dark:text-white
+                      "
+                    >
+                      {project.title}
+                    </h3>
+
+                    <span
+                      className="
+                        mb-3
+                        mt-2
+                        w-fit
+                        rounded-lg
+                        bg-pink-50
+                        px-2.5
+                        py-1
+                        text-xs
+                        font-semibold
+                        text-pink-600
+                        dark:bg-pink-500/10
+                        dark:text-pink-400
+                      "
+                    >
+                      {project.category}
+                    </span>
+
+                    <p
+                      className="
+                        flex-1
+                        text-sm
+                        leading-6
+                        text-slate-600
+                        dark:text-slate-400
+                      "
+                    >
+                      {project.description}
+                    </p>
+
+                    {/* Technologies */}
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {project.technologies.map((technology) => (
+                        <span
+                          key={technology}
+                          className="
+                            rounded-lg
+                            bg-slate-100
+                            px-2.5
+                            py-1
+                            text-[11px]
+                            font-medium
+                            text-slate-600
+                            dark:bg-slate-800
+                            dark:text-slate-400
+                          "
+                        >
+                          {technology}
+                        </span>
+                      ))}
                     </div>
-                  </motion.article>
-                ),
-              )}
+
+                    {/* View Project */}
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+                        mt-5
+                        flex
+                        items-center
+                        justify-center
+                        gap-2
+                        rounded-xl
+                        bg-slate-900
+                        px-4
+                        py-3
+                        text-sm
+                        font-semibold
+                        text-white
+                        transition-all
+                        hover:bg-pink-500
+                        dark:bg-slate-800
+                        dark:hover:bg-pink-500
+                      "
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      View Project
+                    </a>
+                  </div>
+                </motion.article>
+              ))}
             </div>
           ) : (
             <div
@@ -875,22 +817,18 @@ function AboutCreator() {
                   sm:text-base
                 "
               >
-                Visit my portfolio to learn more about
-                my skills, background, projects, and web
-                development journey.
+                Visit my portfolio and social profiles to learn
+                more about my skills, background, projects, and
+                web development journey.
               </p>
             </div>
 
-            <div
-              className="
-                flex
-                flex-wrap
-                gap-3
-              "
-            >
+            {/* Social Links */}
+            <div className="flex flex-wrap gap-3">
+
               {/* Portfolio */}
               <a
-                href="https://harshahettiarachchi.github.io/harsha-portfolio/"
+                href="https://harshahettiararachchi.github.io/harsha-portfolio/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
@@ -938,6 +876,49 @@ function AboutCreator() {
                 <GitBranch className="h-4 w-4" />
                 GitHub
               </a>
+
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/in/harsha-hettiararachchi-b0a30826b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  flex
+                  items-center
+                  gap-2
+                  rounded-xl
+                  border
+                  border-slate-700
+                  bg-slate-800
+                  px-5
+                  py-3
+                  text-sm
+                  font-semibold
+                  text-white
+                  transition
+                  hover:border-pink-500
+                  hover:text-pink-400
+                "
+              >
+                <span
+                  className="
+                    flex
+                    h-5
+                    w-5
+                    items-center
+                    justify-center
+                    rounded-sm
+                    bg-white
+                    text-[11px]
+                    font-bold
+                    text-slate-900
+                  "
+                >
+                  in
+                </span>
+                LinkedIn
+              </a>
+
             </div>
           </div>
         </section>
@@ -956,7 +937,6 @@ function AboutCreator() {
         >
           Built with passion by Harsha Hettiarachchi
         </div>
-
       </div>
     </div>
   );
