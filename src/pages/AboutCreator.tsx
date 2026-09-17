@@ -878,8 +878,7 @@ function AboutCreator() {
               </a>
 
               {/* LinkedIn */}
-              <a
-                href="https://www.linkedin.com/in/harsha-hettiararachchi-b0a30826b/"
+              <a href="https://www.linkedin.com/in/harsha-hettiarachchi-b0a30826b/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
