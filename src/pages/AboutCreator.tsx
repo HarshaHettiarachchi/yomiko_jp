@@ -828,7 +828,7 @@ function AboutCreator() {
 
               {/* Portfolio */}
               <a
-                href="https://harshahettiararachchi.github.io/harsha-portfolio/"
+                href="https://harshahettiarachchi.github.io/harsha-portfolio/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
